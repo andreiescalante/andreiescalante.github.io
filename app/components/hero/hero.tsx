@@ -19,7 +19,7 @@ export default function Hero() {
 					className={classNames('relative min-h-svh', merryWeather.className)}
 				>
 					<div className='absolute top-[15%] md:top-[30%] lg:top-[35%] max-w-[80rem] w-full flex flex-col md:flex-row items-start justify-between px-8 md:px-12 lg:ml-14 gap-12'>
-						{/* Text Content - Matches original Dale Larroder layout */}
+						{/* Text Content - Matches original Andrei Escalante layout */}
 						<div className='flex-1 flex flex-col space-y-4 order-2 md:order-1 text-left max-w-3xl mt-6 md:mt-10'>
 							<h1 className='text-2xl font-medium md:mr-4 md:text-4xl tracking-tight'>
 								Welcome to my{' '}

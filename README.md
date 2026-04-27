@@ -1,4 +1,4 @@
-# dalelarroder.com ⚡️
+# andreiescalante.com ⚡️
 
 - **Framework**: [Next.js](https://nextjs.org/)
 - **Deployment**: [Vercel](https://vercel.com)
@@ -13,13 +13,13 @@
 1. Clone this repo
 
 ```bash
-git clone git@github.com:dlarroder/dalelarroder.git
+git clone git@github.com:andreiescalante/andreiescalante.git
 ```
 
 2. Change directory
 
 ```sh
-cd dalelarroder
+cd andreiescalante
 ```
 
 3. Install dependencies
@@ -55,8 +55,8 @@ This is the second version of my website.
 
 Prevoius v1 version:
 
-- https://v1.dalelarroder.com/
+- https://v1.andreiescalante.com/
 
 ## Licence
 
-[MIT](https://github.com/dlarroder/dalelarroder/blob/master/LICENSE) © [Dale Larroder](https://www.dalelarroder.com)
+[MIT](https://github.com/andreiescalante/andreiescalante/blob/master/LICENSE) © [Andrei Escalante](https://www.andreiescalante.com)

@@ -9,7 +9,7 @@ import WakatimeSkeleton from '../components/wakatime/wakatime-skeleton';
 
 export const metadata = {
 	title: 'Stats',
-	description: 'My Stats - Dale Larroder',
+	description: 'My Stats - Andrei Escalante',
 };
 
 export default function StatsPage() {

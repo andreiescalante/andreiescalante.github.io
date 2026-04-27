@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
 			userAgent: '*',
 			allow: '/',
 		},
-		sitemap: `https://dalelarroder.com/sitemap.xml`,
-		host: `https://dalelarroder.com`,
+		sitemap: `https://andreiescalante.com/sitemap.xml`,
+		host: `https://andreiescalante.com`,
 	};
 }
