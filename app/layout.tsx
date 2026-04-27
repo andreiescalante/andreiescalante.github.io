@@ -9,11 +9,11 @@ import './tailwind.css';
 
 export const metadata: Metadata = {
 	title: {
-		template: '%s | Dale Larroder',
-		default: 'Dale Larroder',
+		template: '%s | Andrei Escalante',
+		default: 'Andrei Escalante',
 	},
-	description: 'I build things for the web.',
-	metadataBase: new URL('https://dalelarroder.com'),
+	description: 'Software Engineer & Creative Developer.',
+	metadataBase: new URL('https://andreiescalante.com'),
 };
 
 interface RootLayoutProps {
