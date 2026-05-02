@@ -1,9 +1,14 @@
 export interface Project {
 	title: string;
-	src: string;
+	thumbnail: string;
+	images?: string[];
 	color: string;
-	url: string;
 	role: string;
+	description: string;
+	stack: string[];
+	isPrivate?: boolean;
+	liveUrl?: string;
+	githubUrl?: string;
 }
 
 export interface ProjectModal {

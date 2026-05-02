@@ -1,39 +1,49 @@
+import classNames from 'classnames';
+import { merryWeather, mukta } from '../fonts';
 import type { ProjectModal } from './types';
 
 interface ProjectProps {
 	index: number;
 	title: string;
-	url: string;
 	role: string;
 	setModal: (modal: ProjectModal) => void;
+	onClick: () => void;
 }
 
 export default function ProjectItem({
 	index,
 	title,
-	url,
 	role,
 	setModal,
+	onClick,
 }: ProjectProps) {
 	return (
-		<a
-			href={url}
-			target='_blank'
+		<button
+			onClick={onClick}
 			onMouseEnter={() => {
 				setModal({ active: true, index });
 			}}
 			onMouseLeave={() => {
 				setModal({ active: false, index });
 			}}
-			className='group flex w-full items-center justify-between border-b px-4 py-10 sm:px-10 sm:py-16'
-			rel='noreferrer'
+			className='group flex w-full items-center justify-between border-b border-black/20 dark:border-neutral-800 px-4 py-8 sm:px-10 sm:py-10 transition-colors hover:bg-neutral-50 dark:hover:bg-white/5 cursor-pointer text-left'
 		>
-			<h2 className='text-2xl transition-all group-hover:-translate-x-3 group-hover:scale-110 sm:text-6xl'>
+			<h2
+				className={classNames(
+					'text-xl transition-all group-hover:-translate-x-3 text-black dark:text-neutral-100 sm:text-3xl',
+					merryWeather.className,
+				)}
+			>
 				{title}
 			</h2>
-			<p className='text-sm font-light transition-all group-hover:translate-x-3 group-hover:scale-110 sm:text-lg'>
+			<p
+				className={classNames(
+					'text-xs font-light transition-all group-hover:translate-x-3 text-black/60 dark:text-neutral-500 sm:text-base',
+					mukta.className,
+				)}
+			>
 				{role}
 			</p>
-		</a>
+		</button>
 	);
 }

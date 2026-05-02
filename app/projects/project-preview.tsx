@@ -80,7 +80,7 @@ export default function ProjectPreview({ modal, projects }: ProjectModalProps) {
 	return (
 		<>
 			<motion.div
-				className='pointer-events-none absolute flex h-[350px] w-[400px] items-center justify-center overflow-hidden bg-white'
+				className='pointer-events-none absolute z-[50] flex h-[220px] w-[300px] items-center justify-center overflow-hidden bg-white dark:bg-neutral-900 shadow-2xl rounded-xl border border-black/5 dark:border-white/10'
 				ref={modalContainer}
 				variants={scaleAnimation}
 				initial='initial'
@@ -94,18 +94,18 @@ export default function ProjectPreview({ modal, projects }: ProjectModalProps) {
 					}}
 				>
 					{projects.map((project) => {
-						const { src, color } = project;
+						const { thumbnail, color } = project;
 						return (
 							<div
 								className='flex h-full w-full items-center justify-center'
 								style={{ backgroundColor: color }}
-								key={`modal_${src}`}
+								key={`modal_${thumbnail}`}
 							>
 								<Image
-									className='h-auto'
-									src={`/static/images/project/${src}`}
-									width={300}
-									height={300}
+									className='h-auto rounded-lg shadow-lg'
+									src={`/static/images/project/${thumbnail}`}
+									width={220}
+									height={220}
 									alt='image'
 								/>
 							</div>
@@ -114,14 +114,14 @@ export default function ProjectPreview({ modal, projects }: ProjectModalProps) {
 				</div>
 			</motion.div>
 			<motion.div
-				className='font-base pointer-events-none absolute z-10 flex h-16 w-16 items-center justify-center rounded-full bg-primary-500 font-light text-white'
+				className='font-base pointer-events-none absolute z-[60] flex h-16 w-16 items-center justify-center rounded-full bg-primary-500 font-bold text-white shadow-lg'
 				ref={cursor}
 				variants={scaleAnimation}
 				initial='initial'
 				animate={active ? 'enter' : 'closed'}
 			></motion.div>
 			<motion.div
-				className='font-base pointer-events-none absolute z-10 flex h-16 w-16 items-center justify-center rounded-full bg-transparent font-light text-white'
+				className='font-base pointer-events-none absolute z-[61] flex h-16 w-16 items-center justify-center rounded-full bg-transparent font-bold text-white uppercase text-[10px] tracking-widest'
 				ref={cursorLabel}
 				variants={scaleAnimation}
 				initial='initial'

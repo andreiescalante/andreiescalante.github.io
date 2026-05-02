@@ -4,15 +4,17 @@ import { motion } from 'motion/react';
 import { useState } from 'react';
 import useBreakpoint from 'use-breakpoint';
 import { projects } from './constants';
+import ProjectDetail from './project-detail';
 import ProjectItem from './project-item';
 import ProjectPreview from './project-preview';
-import type { ProjectModal } from './types';
+import type { Project, ProjectModal } from './types';
 
 const BREAKPOINTS = { mobile: 0, tablet: 768, desktop: 1280 };
 
 export default function Projects() {
 	const { breakpoint } = useBreakpoint(BREAKPOINTS);
 	const [modal, setModal] = useState<ProjectModal>({ active: false, index: 0 });
+	const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
 	return (
 		<>
@@ -26,15 +28,21 @@ export default function Projects() {
 					<ProjectItem
 						index={index}
 						title={project.title}
-						url={project.url}
 						role={project.role}
 						setModal={setModal}
+						onClick={() => setSelectedProject(project)}
 					/>
 				</motion.div>
 			))}
+
 			{breakpoint === 'desktop' && (
 				<ProjectPreview modal={modal} projects={projects} />
 			)}
+
+			<ProjectDetail
+				project={selectedProject}
+				onClose={() => setSelectedProject(null)}
+			/>
 		</>
 	);
 }

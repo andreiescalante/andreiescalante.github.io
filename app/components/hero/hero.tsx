@@ -12,8 +12,10 @@ export default function Hero() {
 	return (
 		<main className='relative min-h-svh w-screen overflow-hidden'>
 			<SplashCursor
-				containerClassName='min-h-svh w-screen'
 				usePrimaryColors={true}
+				SHADING={true}
+				SPLAT_RADIUS={0.2}
+				DENSITY_DISSIPATION={3}
 			>
 				<div
 					className={classNames('relative min-h-svh', merryWeather.className)}
@@ -29,11 +31,12 @@ export default function Hero() {
 
 							<section className='relative z-10'>
 								<p className='text-base text-justify opacity-90'>
-									I'm <span className='font-bold'>Andrei Escalante</span> — a
-									Software Developer and forever a student of the craft. I love
-									building things for the web and am always on the lookout for
-									new challenges and opportunities to learn. I'm passionate
-									about creating beautiful and functional user experiences.
+									I&apos;m <span className='font-bold'>Andrei Escalante</span> —
+									a Software Developer and forever a student of the craft. I
+									love building things for the web and am always on the lookout
+									for new challenges and opportunities to learn. I&apos;m
+									passionate about creating beautiful and functional user
+									experiences.
 								</p>
 							</section>
 
@@ -46,7 +49,6 @@ export default function Hero() {
 											target='_blank'
 											rel='noreferrer'
 											aria-label='linkedin'
-											data-skip-splash-cursor
 										>
 											<LinkedinIcon className='h-9 w-9 hover:text-primary-500 transition-colors' />
 										</Link>
@@ -55,7 +57,6 @@ export default function Hero() {
 											target='_blank'
 											rel='noreferrer'
 											aria-label='github'
-											data-skip-splash-cursor
 										>
 											<GithubIcon className='h-9 w-9 hover:text-primary-500 transition-colors' />
 										</Link>
@@ -65,7 +66,6 @@ export default function Hero() {
 											target='_blank'
 											rel='noreferrer'
 											aria-label='instagram'
-											data-skip-splash-cursor
 										>
 											<InstagramIcon className='h-9 w-9 hover:text-primary-500 transition-colors' />
 										</Link>
@@ -73,17 +73,13 @@ export default function Hero() {
 											href='mailto:escalante.christopherandrei@gmial.com'
 											aria-label='email'
 											rel='noreferrer'
-											data-skip-splash-cursor
 										>
 											<MailIcon className='h-9 w-9 hover:text-primary-500 transition-colors' />
 										</Link>
 									</div>
 								</div>
 								<div className='hidden md:block h-14 border-l border-gray-300 dark:border-gray-700' />
-								<div
-									className='flex flex-wrap gap-3 text-sm'
-									data-skip-splash-cursor
-								>
+								<div className='flex flex-wrap gap-3 text-sm'>
 									<Link
 										href='/about'
 										className='hover:text-primary-500 transition-colors'
@@ -119,14 +115,8 @@ export default function Hero() {
 									src='/static/images/Andrei_Escalante.jpg'
 									alt='Andrei Escalante'
 									fill
-									className='object-cover transition-all duration-700 scale-105 group-hover:scale-110 group-hover:opacity-0'
+									className='object-cover transition-all duration-700 scale-105 group-hover:scale-110'
 									priority
-								/>
-								<Image
-									src='/static/images/Like.png'
-									alt='Like'
-									fill
-									className='object-cover transition-all duration-700 scale-105 group-hover:scale-110 opacity-0 group-hover:opacity-100'
 								/>
 								<div className='absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
 									<p className='text-white text-[10px] font-sans tracking-widest uppercase'>
